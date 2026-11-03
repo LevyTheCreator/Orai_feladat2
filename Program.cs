@@ -84,3 +84,30 @@ int jelszo_erosseg(string pw)
 Console.WriteLine(jelszo_erosseg("hazi_macska_4_life"));
 
 // 7.
+
+Console.Write("Mondat: ");
+string sent = Console.ReadLine();
+
+
+string maganhabgzo_torol(string sent)
+{
+    char[] hun_char = { 'a', 'e', 'i', 'o', 'u' };
+
+    string new_sent = "";
+
+    foreach (char c in sent)
+    {
+        if (hun_char.Contains(c))
+        {
+            continue;
+        }
+        else
+        {
+            new_sent += c;
+        }
+    }
+
+    return new_sent;
+}
+
+Console.WriteLine(maganhabgzo_torol(sent));
